@@ -42,18 +42,19 @@ angular.module('starter.controllers', [])
   $scope,
   $firebaseRef,
   $firebaseArray,
-  Excursions,
+  Resources,
   Geolocation
 ) {
-  Excursions.init();
+  Resources.init();
   $scope.searchResults = [];
-  $scope.excursions = [];
+  $scope.resources = [];
 
   Geolocation.get().then(function(loc){
+    debugger;
     $scope.geoloco = loc;
-    Excursions.getFromLocation(loc);
-    $scope.excursions = Excursions.list;
-    console.log(Excursions.list)
+    Resources.getFromLocation(loc);
+    $scope.resources = Resources.list;
+    console.log(Resources.list)
   });
 })
 

@@ -112,8 +112,8 @@ angular.module('starter', [
   $firebaseRefProvider.registerUrl({
     default: FirebaseUrl,
     users: FirebaseUrl + '/users',
-    excursions: FirebaseUrl + '/excursions',
-    excursionsGeo: FirebaseUrl + '/excursions-geo'
+    resources: FirebaseUrl + '/resources',
+    resourcesGeo: FirebaseUrl + '/resources-geo'
   });
   
   $stateProvider

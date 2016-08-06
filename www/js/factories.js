@@ -41,7 +41,7 @@ angular.module('starter.factories', [])
             q.resolve(data);
           })
           .catch(function(error){
-            console.log("motha fucka")
+            console.log("nope")
             q.reject(error);
           });
         } else {
@@ -130,65 +130,50 @@ angular.module('starter.factories', [])
   $firebaseObject,
   auth
 ) {
-  function init() {
-    this.list = [];
-    var list = this.list;
-    var ref = listRef();
-    
-    if (ref) {
-      this.index = $firebaseArray(ref);
+  function save(beacon) {
+    var q = $q.defer();
 
-      this.index.$watch(function(event) {
-        if (event.event === 'child_added') {
-          // list.push(get(event.key, true)); // for live data
-          get(event.key).then(addToList(list));
+    if (userRef = usersBeacons()) {
+      var ref = $firebaseRef.resources
+
+      if (resource.locations.length > 0) {
+        var data = angular.copy(resource);
+        var firstLoc = data.locations[0];
+        data.date = data.date.getTime();
+        ref.push(data)
+          .then(function(data){
+            geoFire.set(data.key(), [firstLoc.lat, firstLoc.lng]);
+            userRef.child(data.key()).set(true);
+            q.resolve(data);
+          })
+          .catch(function(error){
+            console.log("nope")
+            q.reject(error);
+          });
+        } else {
+          alert('Please Add a Location First!');
+          q.reject('No Locations Mane!!!');
         }
-      });
+    } else {
+      alert('Please Login First');
+      q.reject('You Aint Logged In!!!');
     }
+
+    return q.promise;
   }
 
-  function get(id, live) {
-    var ref = $firebaseRef.resources.child(id);
-
-    if (ref) {
-      if (live) {
-        return $firebaseObject(ref);
-      } else {
-        return ref.once('value');
-      }
-    }
-  }
-
-  function remove(id) {
-    debugger;
-  }
-
-  function addToList(list) {
-    return function(data){
-      list.push({id: data.key(), value: data.val()});
-    }
-  }
-
-  function listRef() {
+  function usersBeacons() {
     if (id = getFirebaseId()) {
-      return $firebaseRef.users.child(id).child('resources');
+      return $firebaseRef.users.child(id).child('beacons');
     }
   }
 
   function getFirebaseId() {
-    return auth.isAuthenticated ? auth.profile.fb_id : null;
-  }
-
-  function unbind() {
-    // Stop listening for events and free up memory
-    this.index && this.index.$destroy();
+    return auth.isAuthenticated ? auth.profile.user_id : null;
   }
 
   return {
-    init: init,
-    get: get,
-    remove: remove,
-    unbind: unbind 
+    init: save
   };
 })
 

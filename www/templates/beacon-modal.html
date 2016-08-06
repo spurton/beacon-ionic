@@ -37,9 +37,9 @@
       <ul class="list">
 
         <li ng-repeat="need in needs" class="item item-toggle">
-           {{need}}
+           {{need.text}}
            <label class="toggle toggle-balanced">
-             <input type="checkbox" ng-model="beacon">
+             <input type="checkbox" ng-model="need.checked" ng-checked="need.checked" ng-change="saveNeed(need)">
              <div class="track">
                <div class="handle"></div>
              </div>

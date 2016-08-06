@@ -152,7 +152,7 @@ angular.module('starter', [
       newBeacon: function() {
         return {
           needs: [],
-          date: Date.now
+          date: Date.now()
         }
       }
     }

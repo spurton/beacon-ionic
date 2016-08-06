@@ -16,7 +16,9 @@
     </div>
   </ion-content>
 
-  <ion-footer-bar ng-click="pending()" class="bar-positive" >
-    <h1 class="title"><i class="fa fa-wifi" aria-hidden="true"></i> Set Beacon</h1>
+  <ion-footer-bar ng-click="pending()" class="bar-positive">
+    <beacon-modal beacon="newBeacon" save="saveInfo">
+      <h1 class="title"><i class="fa fa-wifi" aria-hidden="true"></i> Set Beacon</h1>
+    </beacon-modal>
   </ion-footer-bar>
 </ion-view>

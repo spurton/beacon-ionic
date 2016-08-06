@@ -1,0 +1,56 @@
+<ion-modal-view>
+  <ion-header-bar>
+  <button ng-click="modal.hide()" class="button button-icon icon">
+    Cancel
+  </button>
+
+    <h1 class="title"><i class="fa fa-wifi" aria-hidden="true"></i> Set a Beacon</h1>
+
+    <button ng-click="saveBeacon()" class="button button-icon icon">
+      Save
+    </button>
+  </ion-header-bar>
+
+  <ion-content>
+    <div class="list list-inset">
+      <div class="card" style="background-color:none;">
+        <div class="item item-text-wrap">
+          <i class="fa fa-info-circle" aria-hidden="true"></i> A Beacon notifies all local resources of your needs
+        </div>
+      </div>
+
+      <label class="item item-input">
+        <input ng-model="beacon.name" type="text" placeholder="Name" style="color:#fff;">
+      </label>
+      <label class="item item-input">
+        <input ng-model="beacon.email" type="text" placeholder="Email" style="color:#fff;">
+      </label>
+      <label class="item item-input">
+        <input ng-model="beacon.address" type="text" placeholder="Address" style="color:#fff;">
+      </label>
+      <label class="item item-input">
+        <input ng-model="beacon.primary_phone" type="text" placeholder="Primary Phone" style="color:#fff;">
+      </label>
+      <label class="item item-input">
+        <input ng-model="beacon.secondary_phone" type="text" placeholder="Secondary Phone" style="color:#fff;">
+      </label>
+      <ul class="list">
+
+        <li ng-repeat="need in needs" class="item item-toggle">
+           {{need}}
+           <label class="toggle toggle-balanced">
+             <input type="checkbox" ng-model="beacon">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+           </label>
+        </li>
+
+      </ul>
+    </div>
+
+    <div style='margin-top: 10px;'>
+      
+    </div>
+  </ion-content>
+</ion-modal-view>

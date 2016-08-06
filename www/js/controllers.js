@@ -44,7 +44,8 @@ angular.module('starter.controllers', [])
   $firebaseArray,
   Resources,
   Geolocation,
-  newBeacon
+  newBeacon,
+  UserBeacons
 ) {
   Resources.init();
   $scope.searchResults = [];

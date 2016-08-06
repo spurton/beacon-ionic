@@ -128,32 +128,27 @@ angular.module('starter.factories', [])
   $firebaseRef,
   $firebaseArray,
   $firebaseObject,
-  auth
+  $q,
+  auth,
+  Geolocation
 ) {
   function save(beacon) {
     var q = $q.defer();
 
     if (userRef = usersBeacons()) {
-      var ref = $firebaseRef.resources
-
-      if (resource.locations.length > 0) {
-        var data = angular.copy(resource);
-        var firstLoc = data.locations[0];
-        data.date = data.date.getTime();
-        ref.push(data)
+      Geolocation.get().then(function(loc) {
+        beacon.geoloco = loc;
+        var data = angular.copy(beacon);
+        userRef.push(data)
           .then(function(data){
-            geoFire.set(data.key(), [firstLoc.lat, firstLoc.lng]);
-            userRef.child(data.key()).set(true);
+            // geoFire.set(data.key(), [firstLoc.lat, firstLoc.lng]); // not using
             q.resolve(data);
           })
           .catch(function(error){
             console.log("nope")
             q.reject(error);
           });
-        } else {
-          alert('Please Add a Location First!');
-          q.reject('No Locations Mane!!!');
-        }
+      });
     } else {
       alert('Please Login First');
       q.reject('You Aint Logged In!!!');
@@ -173,7 +168,7 @@ angular.module('starter.factories', [])
   }
 
   return {
-    init: save
+    save: save
   };
 })
 

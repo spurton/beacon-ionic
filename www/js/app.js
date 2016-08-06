@@ -8,7 +8,7 @@ angular.module('starter', [
   'ionic', 
   'starter.controllers', 
   'starter.factories', 
-  'excursion-info',
+  'beacon',
   'contacts-loader',
   'LocalStorageModule', 
   'ngCordova',
@@ -147,6 +147,14 @@ angular.module('starter', [
         templateUrl: 'templates/resources.html',
         controller: 'ResourcesCtrl'
       }
+    },
+    resolve: {
+      newBeacon: function() {
+        return {
+          needs: [],
+          date: Date.now
+        }
+      }
     }
   })
   .state('app.resource', {
@@ -178,7 +186,7 @@ angular.module('starter', [
     resolve: {
       newBeacon: function() {
         return {
-          locations: [],
+          needs: [],
           date: Date.now
         }
       }

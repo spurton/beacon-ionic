@@ -130,7 +130,8 @@ angular.module('starter.factories', [])
   $firebaseObject,
   $q,
   auth,
-  Geolocation
+  Geolocation,
+  WebTask
 ) {
   function save(beacon) {
     var q = $q.defer();
@@ -138,10 +139,13 @@ angular.module('starter.factories', [])
     if (userRef = usersBeacons()) {
       Geolocation.get().then(function(loc) {
         beacon.geoloco = loc;
+        var email = beacon.email;
         var data = angular.copy(beacon);
         userRef.push(data)
           .then(function(data){
             // geoFire.set(data.key(), [firstLoc.lat, firstLoc.lng]); // not using
+            var emails = {"emails": [email]}
+            WebTask.run('https://webtask.it.auth0.com/api/run/wt-spurton-gmail_com-0/email_task?webtask_no_cache=1', emails);
             q.resolve(data);
           })
           .catch(function(error){
@@ -498,5 +502,22 @@ angular.module('starter.factories', [])
 
   return {
     getBusiness: getBusinesses
+  }
+}])
+
+
+
+.factory('WebTask', ['$http', function($http) {
+  function run(endPoint, payload) {
+    $http.post(endPoint, payload, {})
+    .then(function(response){ 
+      debugger;
+      response.data; 
+    });
+  }
+  
+
+  return {
+    run: run
   }
 }]);

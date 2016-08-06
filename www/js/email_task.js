@@ -33,6 +33,7 @@ function sendEmails(emails){
 
 function parsePayload(data){
   var obj = data;
+  console.log(data);
   //return obj.emails[1];
 
   return sendEmails(obj.emails);

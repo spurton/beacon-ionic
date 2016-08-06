@@ -50,11 +50,12 @@ angular.module('starter.controllers', [])
   $scope.resources = [];
 
   Geolocation.get().then(function(loc){
-    debugger;
     $scope.geoloco = loc;
-    Resources.getFromLocation(loc);
-    $scope.resources = Resources.list;
-    console.log(Resources.list)
+    // Resources.getFromLocation(loc); // temporarily disabled
+    Resources.get().orderByKey().on("child_added", function(data) {
+      $scope.resources.push(data.val());
+      console.log($scope.resources);
+    });
   });
 })
 

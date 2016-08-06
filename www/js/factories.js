@@ -74,9 +74,14 @@ angular.module('starter.factories', [])
     return auth.isAuthenticated ? auth.profile.fb_id : null;
   }
 
+  function get() {
+    return $firebaseRef.resources;
+  }
+
   return {
     init: init,
     getFromLocation: getFromLocation,
+    get: get,
     save: save
   }
 })

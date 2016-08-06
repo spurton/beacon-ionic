@@ -59,7 +59,7 @@ angular.module('starter.controllers', [])
 .controller('ResourceCtrl', function(
   $scope,
   $stateParams,
-  UserExcursions,
+  Resources,
   GoogleMapsService,
   $rootScope
 ) {

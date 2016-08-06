@@ -51,11 +51,8 @@ angular.module('starter.controllers', [])
 
   Geolocation.get().then(function(loc){
     $scope.geoloco = loc;
+    $scope.resources = Resources.all();
     // Resources.getFromLocation(loc); // temporarily disabled
-    Resources.get().on("child_added", function(data) {
-      $scope.resources.push(data.val());
-      console.log($scope.resources);
-    });
   });
 })
 
@@ -68,13 +65,13 @@ angular.module('starter.controllers', [])
 ) {
   GoogleMapsService.initService(document.getElementById("map"));
 
-  $scope.excursion = UserExcursions.get($stateParams.id, true);
+  $scope.resource = Resources.get($stateParams.id, true);
 
-  $scope.excursion.$loaded().then(function(excursion) {
-    console.log(excursion);
+  $scope.resource.$loaded().then(function(resource) {
+    console.log(resource);
     var waypts = [];
 
-    var locations = $scope.excursion.locations;
+    var locations = $scope.resource.locations;
 
     angular.forEach(locations, function(location) {
       var latLng = new google.maps.LatLng(location.lat, location.lng);

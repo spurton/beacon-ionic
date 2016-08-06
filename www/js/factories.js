@@ -3,12 +3,25 @@ angular.module('starter.factories', [])
   $firebaseRef,
   $firebaseObject,
   $q,
-  auth
+  auth,
+  $firebaseArray
 ) {
   var geoFire = new GeoFire($firebaseRef.resourcesGeo);
   
   function init() {
     this.list = [];
+    var list = this.list;
+    var ref = listRef();
+    
+    if (ref) {
+      this.index = $firebaseArray(ref);
+      this.index.$watch(function(event) {
+        if (event.event === 'child_added') {
+          list.push(get(event.key, true)); // for live data
+          get(event.key).then(addToList(list));
+        }
+      });
+    }
   }
 
   function save(resource) {
@@ -52,17 +65,17 @@ angular.module('starter.factories', [])
     query.on("key_entered", addToList.bind(this));
   }
 
-  function addToList(key, location, distance) {
-    var ref = $firebaseRef.resources.child(key)
-    $firebaseObject(ref).$loaded()
-    .then(function(obj){
-      if (obj.name) { 
-        this.list.push(obj); 
-      } else {
-        console.log('addToList, Record Doesnt Exist');
-      }
-    }.bind(this));
-  }
+  // function addToList(key, location, distance) {
+  //   var ref = $firebaseRef.resources.child(key)
+  //   $firebaseObject(ref).$loaded()
+  //   .then(function(obj){
+  //     if (obj.name) { 
+  //       this.list.push(obj); 
+  //     } else {
+  //       console.log('addToList, Record Doesnt Exist');
+  //     }
+  //   }.bind(this));
+  // }
 
   function usersBeacons() {
     if (id = getFirebaseId()) {
@@ -74,7 +87,29 @@ angular.module('starter.factories', [])
     return auth.isAuthenticated ? auth.profile.fb_id : null;
   }
 
-  function get() {
+  function all() {
+    return this.list;
+  }
+
+  function get(id, live) {
+    var ref = $firebaseRef.resources.child(id);
+
+    if (ref) {
+      if (live) {
+        return $firebaseObject(ref);
+      } else {
+        return ref.once('value');
+      }
+    }
+  }
+
+  function addToList(list) {
+    return function(data){
+      list.push({id: data.key(), value: data.val()});
+    }
+  }
+
+  function listRef() {
     return $firebaseRef.resources;
   }
 
@@ -82,6 +117,7 @@ angular.module('starter.factories', [])
     init: init,
     getFromLocation: getFromLocation,
     get: get,
+    all: all,
     save: save
   }
 })

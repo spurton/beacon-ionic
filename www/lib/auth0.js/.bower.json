@@ -1,0 +1,20 @@
+{
+  "//": "experimental bower support",
+  "name": "auth0.js",
+  "main": "build/auth0.js",
+  "dependencies": {},
+  "ignore": [
+    "test"
+  ],
+  "homepage": "https://github.com/auth0/auth0.js",
+  "version": "7.0.3",
+  "_release": "7.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v7.0.3",
+    "commit": "3143b7ac52bad410394f8414934c909e09d08989"
+  },
+  "_source": "https://github.com/auth0/auth0.js.git",
+  "_target": ">= 5.2.2",
+  "_originalSource": "auth0.js"
+}

@@ -1,0 +1,366 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$font-family-sans-serif:           '-apple-system', "Montserrat", sans-serif !default;
+
+// Colors
+$light:                           #242A34 !default;
+$button-light-text:               #f6f6f6 !default;
+$button-light-active-bg:          #2e2e2e !default;
+$button-light-bg:                 #242A34 !default;
+$button-stable-bg:                #242A34 !default;
+$button-stable-text:              #f6f6f6 !default;
+$base-background-color:           #242A34 !default;
+$base-color:                      #FCFCFC !default;
+
+$foray-color:                     #00A2C1 !default;
+$foray-background:                #242A34 !default;
+$foray-red:                       #e56c69 !default;
+$foray-orange:                    #de8650 !default;
+$foray-purple:                    #6a5a8c !default;
+$foray-blue:                      #5a9aa8 !default;
+$foray-green:                     #04BEBD !default;
+$foray-dark-blue:                 #285258 !default;
+$foray-font-color-light:          #d8d5cf !default;
+$foray-calendar-background-color: #3f5f66 !default;
+$foray-button-green:              $foray-green !default;
+$foray-button-green-light:        #2aac7d !default;
+$foray-button-purple:             #8c5d79 !default;
+$foray-button-purple-light:       #b1789a !default;
+
+$button-positive-bg:              $foray-button-green !default;
+$button-positive-active-bg:       $foray-button-green-light !default;
+$button-positive-border:          $foray-font-color-light !default;
+$button-stable-bg:                $base-background-color !default;
+$button-stable-active-bg:         #526867 !default;
+$button-assertive-bg:             $foray_button_purple !default;
+$button-assertive-active-bg:      $foray_button_purple-light !default;
+
+
+$orange:                          #FEBD00 !default;
+$dark-orange:                     #EE7F00 !default;
+
+$item-font-size:                  15px !default;
+$item-default-active-bg:          #2e2e2e !default;
+$item-border-width:               1px !default;
+
+$bar-title-font-size:             15px !default;
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+$ionicons-font-path: "../www/fonts" !default;
+@import "www/lib/font-awesome/scss/font-awesome";
+
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.woff') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.item {
+  border-color: #2e2e2e;
+}
+
+.bar.bar-stable {
+  border-color: #2e2e2e;
+}
+
+.bar.bar-stable .title {
+  text-transform: uppercase;
+}
+
+.input-light {
+  color: $base-color;
+}
+
+.fa-map-marker {
+  color: $foray-red;
+}
+
+.fa-compass {
+  color: $foray-red;
+}
+
+.foray-red {
+  color: $foray-red;
+}
+
+.foray-orange {
+  color: $foray-orange;
+}
+
+.foray-purple {
+  color: $foray-purple;
+}
+
+.foray-green {
+  color: $foray-green;
+}
+
+.foray-dark-blue {
+  color: $foray-dark-blue;
+}
+
+.foray-blue {
+  color: $foray-blue;
+}
+
+.foray-light {
+  color: $button-light-text;
+}
+
+.foray-clicked {
+  color: $foray-background;
+}
+
+.foray-light-grey {
+  color: #736a65;
+}
+
+.foray-excursion-info {
+  border-bottom: 2px solid $button-light-active-bg;
+}
+
+.foray-location-text {
+  font-size: 1.4em;
+}
+
+.foray-location-number {
+
+}
+
+.foray-location-name {
+
+}
+
+.a0-lock-container {
+  button[type='submit'] {
+    position: absolute !important; 
+    bottom: 0px !important;
+  }
+
+  .a0-icon-container {
+    color: $orange;
+    background-color: $foray-background;
+  }
+}
+
+.location-marker {
+  padding: 10px;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.icon-50 {
+  font-size: 30px;
+  float: left;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+.fa-2x {
+  font-size: 26px;
+}
+
+.excursion-name {
+  font-size: 20px;
+  padding-top: 3px;
+}
+
+.excursion-desc {
+  font-size: 11px;
+  color:#656565;
+}
+
+.excursion-time {
+  font-size: 10px;
+}
+
+.scroll-content {
+  background-color: #526867;
+}
+
+#materialize-button {
+  background-color: $dark-orange;
+  border: 0px;
+  color: #fff;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: absolute;
+  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  max-height: initial;
+  max-width: initial;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: .3s fade-in-out;
+  transition: .3s fade-in-out;
+  -webkit-transition-property: -webkit-transform,box-shadow;
+  transition-property: transform,box-shadow;
+  i {
+    font-size: 40px;
+  }
+}
+
+.ion-google-place-container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+}
+
+
+/*==============
+ Calendar 
+==============*/
+.ionic-datepicker {
+
+  .active_color {
+    color: $foray-background !important;
+  }
+
+  .date_selected {
+    background-color: $foray-background !important;
+    color: #fff !important;
+  }
+
+  .item-select select {
+    color: $foray-font-color-light;
+  }
+
+  .right_arrow button,
+  .left_arrow button {
+    font-size: 20px;
+  }
+  .right_arrow button.active_color,
+  .left_arrow button.active_color {
+    color: #fff !important;
+  }
+  .calendar_grid  {
+    > div {
+      height: auto !important;
+    }
+    > .row:first-child > .col,
+    .date_cell {
+      font-size: 20px;
+      color: #fff;
+    }
+    > .row:first-child > .col {
+      text-align: center;
+      font-weight: 200 !important;
+    }
+    .date_cell {
+      padding: 12px 5px;
+    }
+    .date_col:nth-child(odd) {
+        background-color: $foray-calendar-background-color;
+    }
+    .today > div {
+      color: $foray-red !important;
+    }
+    .date_selected .date_cell,
+    .today > div {
+      ;
+    }
+  }
+}
+
+.popup {
+  .popup-head, .popup-buttons {
+    background-color: $foray-calendar-background-color !important;
+  }
+  .popup-body {
+    background-color: $base-background-color;
+  }
+}
+
+
+/* Map */
+#map {
+  width: 100%;
+  height: 100%;
+  background-color: #fff !important;
+}
+ 
+.scroll {
+  height: 100%;
+}
+ 
+.map-container {
+  background-color: #fff;
+  width: 100%;
+  height: 200px;
+}
+
+.rating {
+  padding: 20px;
+}
+
+.rating-number {
+  font-size: 30px;
+  vertical-align: middle;
+  color: $foray-button-purple;
+}
+
+.hours {
+  font-size: 30px;
+  color: $foray-dark-blue;
+}
+
+.star-rating {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  
+  .star {
+    padding: 1px;
+    color: #ddd;
+    font-size: 20px;
+    text-shadow: .05em .05em #aaa;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+
+    &.filled {
+      color: #fd0;
+    }
+  }
+
+  &.readonly .star.filled {
+    color: #666;
+  }
+}
+

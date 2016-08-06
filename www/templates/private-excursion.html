@@ -1,0 +1,57 @@
+<ion-view view-title="Excursion">
+   <ion-content class="has-footer padding">
+    <div class="row">
+      <div class="col col-100">
+        <div class="map-container" ng-show="$root.enableMap">
+          <div id="map" data-tap-disabled="true"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col col-100 foray-excursion-info" style="padding-bottom:20px;">
+        <h2>{{excursion.name}}</h2>
+        <h4 class="foray-blue">{{excursion.description}}</h4>
+        <span ng-if="excursion.date">@ {{excursion.date | date:'medium'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-100" style="padding-top:10px;">
+        <span class="foray-location-text">Locations</span>
+      </div>
+    </div>
+
+    <ion-list>
+      <div class="list">
+        <a ng-repeat="location in excursion.locations"
+          class="item item-icon-left item-text-wrap intro-list-item" ui-sref="app.location({placeId: location.place_id, lat: excursion.lat, lng: excursion.lng})">
+            <input style="display:none;"/>
+            <span class="foray-location-number">#{{$index + 1}}</span>
+            <i class="fa fa-compass fa-2x foray-red location-marker" aria-hidden="true"></i> 
+            <span class="foray-location-name">{{location.name}}</span>
+        </a>
+      </div>
+    </ion-list>
+
+    <div class="row">
+      <div class="col col-100" style="padding-top:10px;">
+        <span class="foray-location-text">Attendees</span>
+      </div>
+    </div>
+
+    <ion-list>
+      <ion-item
+        ng-repeat="attendee in excursion.attendees"
+        class="item item-icon-left item-text-wrap intro-list-item">
+        <i class="fa fa-user fa-2x foray-blue location-marker" aria-hidden="true"></i> 
+        <span class="foray-location-name">{{attendee.name}}</span>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+  <ion-footer-bar ng-click="pending()" class="bar-positive" >
+    <h1 class="title">Lets do it!</h1>
+  </ion-footer-bar>
+</ion-view>

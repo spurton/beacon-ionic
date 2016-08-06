@@ -1,0 +1,40 @@
+<ion-modal-view>
+  <ion-header-bar>
+  <button ng-click="modal.hide()" class="button button-icon icon">
+    Cancel
+  </button>
+
+    <h1 class="title">Excursion Info</h1>
+
+    <button ng-click="saveExcursion()" class="button button-icon icon">
+      Save
+    </button>
+  </ion-header-bar>
+
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input ng-model="excursion.name" type="text" placeholder="Name" style="color:#fff;">
+      </label>
+      <label class="item item-input">
+        <input ng-model="excursion.description" type="text" placeholder="Description" style="color:#fff;">
+      </label>
+    </div>
+
+    <div style='margin-top: 10px;'>
+      <!-- Date Picker -->
+      <ionic-datepicker input-obj="DateTimePicker.datePickerObject">
+        <button class="button button-royal">Set Date</button>
+      </ionic-datepicker>
+
+      <!-- Time Picker -->
+      <ionic-timepicker input-obj="DateTimePicker.timePickerObject">
+        <button class="button button-block button-assertive">
+          <standard-time-meridian etime='DateTimePicker.timePickerObject.inputEpochTime'></standard-time-meridian>
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+           Time: {{excursion.date | date:'medium'}}
+        </button>
+      </ionic-timepicker>
+    </div>
+  </ion-content>
+</ion-modal-view>

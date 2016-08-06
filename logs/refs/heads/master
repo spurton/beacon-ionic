@@ -1,0 +1,138 @@
+0000000000000000000000000000000000000000 6ca5357e4b941f659f9063445494864f6eca56c1 Scott Burton <spurton@gmail.com> 1468446623 -0700	commit (initial): Initial ionic project
+6ca5357e4b941f659f9063445494864f6eca56c1 c78b614c3a8def2e1ad633616247883354a374ec Scott Burton <spurton@gmail.com> 1468538149 -0700	commit: Inject localstorage module
+c78b614c3a8def2e1ad633616247883354a374ec b091a3b9217cc31ae690ffe0da8710c5fe0d2d16 Scott Burton <spurton@gmail.com> 1468538158 -0700	commit: Add sass
+b091a3b9217cc31ae690ffe0da8710c5fe0d2d16 24993b46a915083a6ea14f2d29cea29e0e5feda0 Scott Burton <spurton@gmail.com> 1468539975 -0700	commit: Adding font-awesome
+24993b46a915083a6ea14f2d29cea29e0e5feda0 c65c5d98034804c5671312cf0f6a141031c538cf Scott Burton <spurton@gmail.com> 1468623316 -0700	commit: CSS changes
+c65c5d98034804c5671312cf0f6a141031c538cf d2a217d65b3d49836c2575485c1ec3b819c654f5 Scott Burton <spurton@gmail.com> 1468627234 -0700	commit: colorize the marker
+d2a217d65b3d49836c2575485c1ec3b819c654f5 72bbffba6af3e3b8560385c0e24853b35fbd96d5 Scott Burton <spurton@gmail.com> 1468627244 -0700	commit: ngcordova lib
+72bbffba6af3e3b8560385c0e24853b35fbd96d5 05744c76d8f38ab98852dc1508bd877f88f26727 Scott Burton <spurton@gmail.com> 1468627390 -0700	commit: ngcordova include and injection
+05744c76d8f38ab98852dc1508bd877f88f26727 be0e5f8b79421c19bafa36fec659699205bba74a Scott Burton <spurton@gmail.com> 1468627937 -0700	commit: Rename playlists to excursions
+be0e5f8b79421c19bafa36fec659699205bba74a 3cffa3e623d9f0b11ced2594e0bd234d87988e7d Scott Burton <spurton@gmail.com> 1468865383 -0700	pull -v --progress origin: Fast-forward
+3cffa3e623d9f0b11ced2594e0bd234d87988e7d 5acf5ea3a81fad781dd993ef59cd752832df760b Scott Burton <spurton@gmail.com> 1468873760 -0700	commit: rename to excursions
+5acf5ea3a81fad781dd993ef59cd752832df760b dff6599bd2312f5a18d78db501e10097f76188bd Scott Burton <spurton@gmail.com> 1468874277 -0700	commit: Add basic geolocation
+dff6599bd2312f5a18d78db501e10097f76188bd 77b204859a8674ad4def062585c769cda0a775c3 Scott Burton <spurton@gmail.com> 1468875618 -0700	commit: Add acquiring location modal.
+77b204859a8674ad4def062585c769cda0a775c3 0a90bc1432ec30f865c1afd82282180e47c3ebfc Scott Burton <spurton@gmail.com> 1468875795 -0700	commit: Adding angular geofire
+0a90bc1432ec30f865c1afd82282180e47c3ebfc 46578c8f0be193c3efffbe70bc37560b334a1838 Scott Burton <spurton@gmail.com> 1468878347 -0700	commit: Angular Geofire and geofire WIP for setting location
+46578c8f0be193c3efffbe70bc37560b334a1838 676f6f42af12a613309adff0a3523c3ea25c1e3e Scott Burton <spurton@gmail.com> 1468882771 -0700	commit: Custom list with description
+676f6f42af12a613309adff0a3523c3ea25c1e3e c536cb85fa477c7e56d5ded2b2dbf290aa8f5e75 Scott Burton <spurton@gmail.com> 1468882808 -0700	commit: Add descriptions, use the event trigger for geofire
+c536cb85fa477c7e56d5ded2b2dbf290aa8f5e75 29bed0e77ee785758a3a37194a43a2fb349d088a Scott Burton <spurton@gmail.com> 1468882817 -0700	commit: Arrow for later use
+29bed0e77ee785758a3a37194a43a2fb349d088a c8f798c202dbc4fd8738fb37d8d01fffd1e3c8c6 Scott Burton <spurton@gmail.com> 1468882835 -0700	commit: icon size change and excursion font alignment and colors
+c8f798c202dbc4fd8738fb37d8d01fffd1e3c8c6 43b9e880c232def72f2260f71829d354bd703b7f Scott Burton <spurton@gmail.com> 1468883963 -0700	commit: Remove browse
+43b9e880c232def72f2260f71829d354bd703b7f c34b3ebb1c2807c9540e48a955a23cd36a91140e Scott Burton <spurton@gmail.com> 1468883973 -0700	commit: Add excursion view
+c34b3ebb1c2807c9540e48a955a23cd36a91140e 7a37da964ae538f2a178a8a07cc0f89db03a7c02 Scott Burton <spurton@gmail.com> 1468883989 -0700	commit: Blank controller and state for excursion
+7a37da964ae538f2a178a8a07cc0f89db03a7c02 d304c291399c6756c24e32b73fd60a2d943aa416 Scott Burton <spurton@gmail.com> 1468883999 -0700	commit: leaflet library
+d304c291399c6756c24e32b73fd60a2d943aa416 9717f4b19ed92ef75b6848126674169bd19bc98a Scott Burton <spurton@gmail.com> 1468884158 -0700	commit: angular leaflet directive lib
+9717f4b19ed92ef75b6848126674169bd19bc98a bdb9624c408f02cc8e3f5be99bdc510ff27c9f93 Scott Burton <spurton@gmail.com> 1468884710 -0700	commit: Add leaflet to index
+bdb9624c408f02cc8e3f5be99bdc510ff27c9f93 151681990331fb1ba45b47da0a5e5ea0630aa319 Scott Burton <spurton@gmail.com> 1468884722 -0700	commit: inject leaflet directive
+151681990331fb1ba45b47da0a5e5ea0630aa319 08cd11486c7994e8b1ae1c94bbad125192a1e2a9 Scott Burton <spurton@gmail.com> 1468884743 -0700	commit: Setup fake leaflet map
+08cd11486c7994e8b1ae1c94bbad125192a1e2a9 096134f7924c3257994d7cbc37a9445652612679 Scott Burton <spurton@gmail.com> 1468890144 -0700	pull -v --progress origin: Merge made by the 'recursive' strategy.
+096134f7924c3257994d7cbc37a9445652612679 d32b54bab280b6d4546899a38115552f117df35a Scott Burton <spurton@gmail.com> 1468953433 -0700	commit: Color the scroll content area lighter
+d32b54bab280b6d4546899a38115552f117df35a f1c8685017b86e8ea9f6f04b259f05a0b6f0d1a4 Scott Burton <spurton@gmail.com> 1468953445 -0700	commit: scroll content
+f1c8685017b86e8ea9f6f04b259f05a0b6f0d1a4 d22fff534772d9fbb7e956487767bc5b5c7da7bb Scott Burton <spurton@gmail.com> 1468953456 -0700	commit: Remove leaflet for now
+d22fff534772d9fbb7e956487767bc5b5c7da7bb 20cc0dff12f1d36dfb7ac660762b6ceffe78ee70 Scott Burton <spurton@gmail.com> 1468955400 -0700	pull -v --progress origin: Fast-forward
+20cc0dff12f1d36dfb7ac660762b6ceffe78ee70 9053e140927ff8f1d93b6423a9a432adf2327cff Scott Burton <spurton@gmail.com> 1468958903 -0700	pull -v --progress origin: Fast-forward
+9053e140927ff8f1d93b6423a9a432adf2327cff e1652899993eebdd707f805bfeae97844963606f Scott Burton <spurton@gmail.com> 1468960547 -0700	commit: Add Geolocation factory
+e1652899993eebdd707f805bfeae97844963606f 7baac062033f8a9d26f87cea51c4e1d3ed765cf0 Scott Burton <spurton@gmail.com> 1468960556 -0700	commit: Clean up controller
+7baac062033f8a9d26f87cea51c4e1d3ed765cf0 eb145b121a9b541d7973f0ada0d0531af88c3edc Scott Burton <spurton@gmail.com> 1468960569 -0700	commit: Use the geolocation service on device ready
+eb145b121a9b541d7973f0ada0d0531af88c3edc c771057c7d18bc892b44c04411287474d1ebb16f Scott Burton <spurton@gmail.com> 1468960621 -0700	commit (merge): Merge branch 'master' of github.com:spurton/foray-ionic
+c771057c7d18bc892b44c04411287474d1ebb16f 4f62b9eb055baa60cee920c953607789493a64a3 Scott Burton <spurton@gmail.com> 1468960949 -0700	commit: simplify and expose the update location
+4f62b9eb055baa60cee920c953607789493a64a3 245a2f6ba00b23c8637ce6cc72d81cd99abe5eac Scott Burton <spurton@gmail.com> 1468960960 -0700	pull -v --progress origin: Merge made by the 'recursive' strategy.
+245a2f6ba00b23c8637ce6cc72d81cd99abe5eac 33d4123f1e5a410cc9afc9c1c9bf114c900a178c Scott Burton <spurton@gmail.com> 1468961536 -0700	commit: Couple menu changes
+33d4123f1e5a410cc9afc9c1c9bf114c900a178c 0e696be3414017a9647ae726bf947cbd9327dca5 Scott Burton <spurton@gmail.com> 1468961699 -0700	commit (merge): Merge branch 'master' of github.com:spurton/foray-ionic
+0e696be3414017a9647ae726bf947cbd9327dca5 c3f25a4b4ecd34d370efbef53b549ac61ba9be75 Scott Burton <spurton@gmail.com> 1468961970 -0700	pull -v --progress origin: Fast-forward
+c3f25a4b4ecd34d370efbef53b549ac61ba9be75 761613c8c4f1daeb02d100fa1637c5fb6a2728bd Scott Burton <spurton@gmail.com> 1468962566 -0700	commit: Use slider icon
+761613c8c4f1daeb02d100fa1637c5fb6a2728bd 3a0395bf9d027ef4f25497783ecc414102b5f519 Scott Burton <spurton@gmail.com> 1468962636 -0700	pull -v --progress origin: Merge made by the 'recursive' strategy.
+3a0395bf9d027ef4f25497783ecc414102b5f519 0394a66f767478be95339a1ea831d7c26bbd602a Scott Burton <spurton@gmail.com> 1468965895 -0700	pull -v --progress origin: Fast-forward
+0394a66f767478be95339a1ea831d7c26bbd602a 5380aef4acf0e6d7e94116fd7f1b60d235b803f6 Scott Burton <spurton@gmail.com> 1468966782 -0700	commit: remove angular geofire
+5380aef4acf0e6d7e94116fd7f1b60d235b803f6 3b649d1c327d4e26c4b9567b11c057fd5fc0de57 Scott Burton <spurton@gmail.com> 1468967004 -0700	commit: update geofire
+3b649d1c327d4e26c4b9567b11c057fd5fc0de57 e621f0577af62a399a8028c9f2ae7ad6cb468928 Scott Burton <spurton@gmail.com> 1468967345 -0700	commit: inject geofire
+e621f0577af62a399a8028c9f2ae7ad6cb468928 72c501a0458d79da942ff99de5a084525aa6f5e7 Scott Burton <spurton@gmail.com> 1468969716 -0700	commit: more geoquery stuff, remove the injected module
+72c501a0458d79da942ff99de5a084525aa6f5e7 35217e03e8f5b2d039e26056d2a105e73e69e5b3 Scott Burton <spurton@gmail.com> 1468969733 -0700	commit: Make the sliders a bit smaller
+35217e03e8f5b2d039e26056d2a105e73e69e5b3 adc9879532637a9841528ec2e69c5f3c6584cdd3 Scott Burton <spurton@gmail.com> 1468972103 -0700	pull -v --progress origin: Fast-forward
+adc9879532637a9841528ec2e69c5f3c6584cdd3 b6403cf3814b3b61eec82a040fc610c86185e1b7 Scott Burton <spurton@gmail.com> 1468973701 -0700	commit: Use the key id for excursion
+b6403cf3814b3b61eec82a040fc610c86185e1b7 aabcf1fbf8e750b86314643b934dea1890507613 Scott Burton <spurton@gmail.com> 1469035414 -0700	pull -v --progress origin: Fast-forward
+aabcf1fbf8e750b86314643b934dea1890507613 d215e4b4dc859b8a6f575d01967dea5cb0ea5cf6 Scott Burton <spurton@gmail.com> 1469038413 -0700	commit: Color the compass
+d215e4b4dc859b8a6f575d01967dea5cb0ea5cf6 5274f67c855774cd3a4465696e011e792e0eac3a Scott Burton <spurton@gmail.com> 1469039015 -0700	pull -v --progress origin: Merge made by the 'recursive' strategy.
+5274f67c855774cd3a4465696e011e792e0eac3a fe63b7ee4bae13a78d966f3ba030f5049540f7cc Scott Burton <spurton@gmail.com> 1469039220 -0700	pull -v --progress origin: Merge made by the 'recursive' strategy.
+fe63b7ee4bae13a78d966f3ba030f5049540f7cc c518d661eda96ce66521d339836f97b05b533a52 Scott Burton <spurton@gmail.com> 1469041869 -0700	commit: Custom colors for the calendar and buttons
+c518d661eda96ce66521d339836f97b05b533a52 fec372f1f335c9ff2fd7b5c157267ce6f1fa0516 Scott Burton <spurton@gmail.com> 1469041907 -0700	commit: syntax error
+fec372f1f335c9ff2fd7b5c157267ce6f1fa0516 90f7ccd62a4d51182fb432032e1bb9c7de9415b4 Scott Burton <spurton@gmail.com> 1469046213 -0700	commit: Style changes to make everything look better
+90f7ccd62a4d51182fb432032e1bb9c7de9415b4 c0dc6e14776fc3971acf3365395cca61479dbfb7 Scott Burton <spurton@gmail.com> 1469047216 -0700	commit: Display the current date on button
+c0dc6e14776fc3971acf3365395cca61479dbfb7 5f278679c56324cb6be2086cd811361f4846e866 Scott Burton <spurton@gmail.com> 1469050273 -0700	commit: Put the date range back
+5f278679c56324cb6be2086cd811361f4846e866 0a570f72ea9892e49d06be675cbe799537ac5d51 Scott Burton <spurton@gmail.com> 1469050289 -0700	commit: Add clock to time
+0a570f72ea9892e49d06be675cbe799537ac5d51 c71ccd51d3991a295191e0b8cc49db0f6187e6ba Scott Burton <spurton@gmail.com> 1469050301 -0700	commit: Change border color for buttons
+c71ccd51d3991a295191e0b8cc49db0f6187e6ba 1a89e938e4480738801faab443f59c0019f5fbad Scott Burton <spurton@gmail.com> 1469050943 -0700	commit: Not used
+1a89e938e4480738801faab443f59c0019f5fbad 7a35848f847f229b708ff3c8b95e661d9b990bda Scott Burton <spurton@gmail.com> 1469050970 -0700	commit: WIP excursion show
+7a35848f847f229b708ff3c8b95e661d9b990bda b10c06bb18be26386e39eae31fb03f1fde3d0f9e Scott Burton <spurton@gmail.com> 1469051136 -0700	commit: Lets do it button
+b10c06bb18be26386e39eae31fb03f1fde3d0f9e 59daf9bacf1ef48d87b79e8f606f8121481ad21d Scott Burton <spurton@gmail.com> 1469052288 -0700	commit: rename to save excursion
+59daf9bacf1ef48d87b79e8f606f8121481ad21d fc02a341b179cacd870214fd30dcd91434db2e22 Scott Burton <spurton@gmail.com> 1469052300 -0700	commit: bind to newExcursion
+fc02a341b179cacd870214fd30dcd91434db2e22 e08dc7c14219a9861d8e6014d4b3e563cc847ef4 Scott Burton <spurton@gmail.com> 1469057143 -0700	commit: moment lib
+e08dc7c14219a9861d8e6014d4b3e563cc847ef4 f388c2244d8e77a0a32f2f68442bce39ddc8973b Scott Burton <spurton@gmail.com> 1469058103 -0700	commit: refactor into factory for date and time picker
+f388c2244d8e77a0a32f2f68442bce39ddc8973b 631c38689a781141b03881704a3fc5a3e778cd17 Scott Burton <spurton@gmail.com> 1469061200 -0700	pull -v --progress origin: Fast-forward
+631c38689a781141b03881704a3fc5a3e778cd17 c4ca91c03a183077cc216614fd59319cca8bea1e Scott Burton <spurton@gmail.com> 1469061769 -0700	commit: Add blue to our color selection
+c4ca91c03a183077cc216614fd59319cca8bea1e 6eba5c6ce2a23c7505b20ff358b289e1658812db Scott Burton <spurton@gmail.com> 1469061779 -0700	commit: Remove default title
+6eba5c6ce2a23c7505b20ff358b289e1658812db 63b42eb1344db1546a77d4dd600df81bc718aef7 Scott Burton <spurton@gmail.com> 1469061790 -0700	commit: add semicolons
+63b42eb1344db1546a77d4dd600df81bc718aef7 dca48fd35eb86ee68cd1b5cecbbae7c59adac901 Scott Burton <spurton@gmail.com> 1469061807 -0700	commit: fix excursion name and desc binding
+dca48fd35eb86ee68cd1b5cecbbae7c59adac901 6c6a3753de1da61a46e99ef5f5a5cb30c678c329 Scott Burton <spurton@gmail.com> 1469061825 -0700	commit: use foray blue for name and description
+6c6a3753de1da61a46e99ef5f5a5cb30c678c329 ef386a76e2b1f3a2bf43c5b6ada7156e53c49172 Scott Burton <spurton@gmail.com> 1469069562 -0700	commit: Contacts directive
+ef386a76e2b1f3a2bf43c5b6ada7156e53c49172 8f131f0ca2f0e0efabf32516c8970d7f9e61a3ed Scott Burton <spurton@gmail.com> 1469069582 -0700	commit: inject contacts-loader, don't require login for create
+8f131f0ca2f0e0efabf32516c8970d7f9e61a3ed 23955a9faa98f54240e9e65e566ab35771fff380 Scott Burton <spurton@gmail.com> 1469069598 -0700	commit: todos
+23955a9faa98f54240e9e65e566ab35771fff380 5d5bf6bffda8b0d5537700d059eaafe813921dc0 Scott Burton <spurton@gmail.com> 1469069610 -0700	commit: proper path for font-awesome
+5d5bf6bffda8b0d5537700d059eaafe813921dc0 8d7985f4f7ae83455a1f5d9902eb016ae1b50e45 Scott Burton <spurton@gmail.com> 1469069619 -0700	commit: Contacts modal
+8d7985f4f7ae83455a1f5d9902eb016ae1b50e45 7c611cef9e40670d1bbd9cd3eae5d8f086ca3444 Scott Burton <spurton@gmail.com> 1469069628 -0700	commit: Wrap the button in the modal
+7c611cef9e40670d1bbd9cd3eae5d8f086ca3444 1eed6fd9e67734a92eb3a6605fe7064baf2e292d Scott Burton <spurton@gmail.com> 1469070276 -0700	commit: Some UI changes
+1eed6fd9e67734a92eb3a6605fe7064baf2e292d c82a5fb5d2ce420df2ad434fd375df74df11e714 Scott Burton <spurton@gmail.com> 1469070532 -0700	commit: Change the default text, change the show view
+c82a5fb5d2ce420df2ad434fd375df74df11e714 cebddc42027a7dbd78a344e740b2bce6a1b16d47 Scott Burton <spurton@gmail.com> 1469070937 -0700	pull -v --progress origin: Fast-forward
+cebddc42027a7dbd78a344e740b2bce6a1b16d47 bbdb577eca594556fc6937bb67ca6b67061e1948 Scott Burton <spurton@gmail.com> 1469075078 -0700	pull -v --progress origin: Fast-forward
+bbdb577eca594556fc6937bb67ca6b67061e1948 25e61f7f87c89cde4479a8dd09647a732f71f2d1 Scott Burton <spurton@gmail.com> 1469077212 -0700	commit: Change button to invite people
+25e61f7f87c89cde4479a8dd09647a732f71f2d1 2e96e4b3d27539cc60d1f66e7b70abfe0fae42a5 Scott Burton <spurton@gmail.com> 1469077232 -0700	commit: remove unused obj
+2e96e4b3d27539cc60d1f66e7b70abfe0fae42a5 df9aebdffa6324d5895122b787ed4db3de8df4e3 Scott Burton <spurton@gmail.com> 1469077253 -0700	commit: log contacts, also use find with empty obj
+df9aebdffa6324d5895122b787ed4db3de8df4e3 bb1fd696aa5814422d2b614ae1f2bfeed75324d5 Scott Burton <spurton@gmail.com> 1469121955 -0700	commit: Ionic filter bar for searching contacts
+bb1fd696aa5814422d2b614ae1f2bfeed75324d5 f2229e6ebcf4472e8a5f1fcda208843f38cc7d50 Scott Burton <spurton@gmail.com> 1469121989 -0700	commit: include and inject the filter bar plus the scope action on modal
+f2229e6ebcf4472e8a5f1fcda208843f38cc7d50 76ff58c6b50e302ba82d1e804a94420fe6c24b2c Scott Burton <spurton@gmail.com> 1469124571 -0700	commit: Remove ionic-filter-bar and use plain ole search input
+76ff58c6b50e302ba82d1e804a94420fe6c24b2c 08f066e3d73407615439ea6da3dcb9927d572686 Scott Burton <spurton@gmail.com> 1469142211 -0700	commit: Simple phonnumber formatter
+08f066e3d73407615439ea6da3dcb9927d572686 e180f606b21e4b9f75eb4ac9c3cd13d5cc49e2bf Scott Burton <spurton@gmail.com> 1469142230 -0700	commit: some extra colors
+e180f606b21e4b9f75eb4ac9c3cd13d5cc49e2bf 158c2b8227f507378e83a85b123146b71c24fc11 Scott Burton <spurton@gmail.com> 1469142249 -0700	commit: phone number select popup
+158c2b8227f507378e83a85b123146b71c24fc11 805efc22bf0ee43f951d5274d05e05c57601ac49 Scott Burton <spurton@gmail.com> 1469142267 -0700	commit: remove debug
+805efc22bf0ee43f951d5274d05e05c57601ac49 5ca32f59672897c84376c28e16bb474bffc59f33 Scott Burton <spurton@gmail.com> 1469145668 -0700	commit: rename to foray-clicked
+5ca32f59672897c84376c28e16bb474bffc59f33 f099aad5c96f5464e942749ef6204555d150c661 Scott Burton <spurton@gmail.com> 1469145685 -0700	commit: set the attendees obj in controller so it doesn't get wiped out
+f099aad5c96f5464e942749ef6204555d150c661 c6632af83598d8176e9643787b88496da80d0e02 Scott Burton <spurton@gmail.com> 1469145730 -0700	commit: show the icon darkened when added
+c6632af83598d8176e9643787b88496da80d0e02 9782f362c8d6e0869a8cd5ffe690782f1a5fe3eb Scott Burton <spurton@gmail.com> 1469145742 -0700	commit: List the people going in the main view
+9782f362c8d6e0869a8cd5ffe690782f1a5fe3eb 9b103dea1f6a93080ef03dc0e48a06fba7c9669d Scott Burton <spurton@gmail.com> 1469216545 -0700	commit: Clean up the excursion layout and change the attendee list
+9b103dea1f6a93080ef03dc0e48a06fba7c9669d 172d27c630f4eb9e544f292f68333fbb3eea5a45 Scott Burton <spurton@gmail.com> 1469216559 -0700	commit: attendees is now an array
+172d27c630f4eb9e544f292f68333fbb3eea5a45 de6614c80d93e3e6a5c097cc49e00b904bf22131 Scott Burton <spurton@gmail.com> 1469216575 -0700	commit: Ensure we have unique attendees and emails
+de6614c80d93e3e6a5c097cc49e00b904bf22131 5bc66ea2554e3543d9b5c52a55b5988dcf1fe234 Scott Burton <spurton@gmail.com> 1469216591 -0700	pull -v --progress origin: Merge made by the 'recursive' strategy.
+5bc66ea2554e3543d9b5c52a55b5988dcf1fe234 8b882905b956dc7c5dde77b6687ce69621295f13 Scott Burton <spurton@gmail.com> 1469217157 -0700	commit: Make the input text white on contacts search
+8b882905b956dc7c5dde77b6687ce69621295f13 ada0e2cd47a5bdf46e49f290d2894022310a225e Scott Burton <spurton@gmail.com> 1469217167 -0700	commit: Change button name
+ada0e2cd47a5bdf46e49f290d2894022310a225e 7710bec9e37c02283939dae7fd3c76e10d303d83 Scott Burton <spurton@gmail.com> 1469217913 -0700	commit: Proper save on button click
+7710bec9e37c02283939dae7fd3c76e10d303d83 7dac365a447b5a323a31fc27ec45b0e32bc64c5f Scott Burton <spurton@gmail.com> 1469222799 -0700	commit: splash and icon
+7dac365a447b5a323a31fc27ec45b0e32bc64c5f e425334876d52f021791cca9b0a2718ffdf8c56c Scott Burton <spurton@gmail.com> 1469303619 -0700	commit: Add the google maps service
+e425334876d52f021791cca9b0a2718ffdf8c56c bbc471d08a2b3a7a58f9dbefe2f44f7586da419d Scott Burton <spurton@gmail.com> 1469303634 -0700	commit: Show the map on the excursion show
+bbc471d08a2b3a7a58f9dbefe2f44f7586da419d b97f549f4dcd5be44b457bb98f45349300161ec9 Scott Burton <spurton@gmail.com> 1469303647 -0700	commit: Remove the user excursions objs in the view
+b97f549f4dcd5be44b457bb98f45349300161ec9 457e2f2366fddb8f6565f0595bf84b756191a530 Scott Burton <spurton@gmail.com> 1469303654 -0700	commit: map css
+457e2f2366fddb8f6565f0595bf84b756191a530 fb3273327f228299e6eb165021a7c92db9d3bd74 Scott Burton <spurton@gmail.com> 1469303669 -0700	commit: The loading of the map
+fb3273327f228299e6eb165021a7c92db9d3bd74 0acd4c0e149882392020d66a7fc4c06911f3061f Scott Burton <spurton@gmail.com> 1469478218 -0700	commit: simplify maps service waypoints
+0acd4c0e149882392020d66a7fc4c06911f3061f d0b0a731db4c9b0e135cdf96d0cd9ca91d3910fc Scott Burton <spurton@gmail.com> 1469480347 -0700	commit: Change the map type and to walking
+d0b0a731db4c9b0e135cdf96d0cd9ca91d3910fc adb5445f3170ef81ff3d98842ff5c766b11576ba Scott Burton <spurton@gmail.com> 1469480362 -0700	commit: Move the name and desc to the top
+adb5445f3170ef81ff3d98842ff5c766b11576ba b2d519b07a40f3510460cea1fe1e6d8696eecaa0 Scott Burton <spurton@gmail.com> 1469480371 -0700	commit: Add the date time
+b2d519b07a40f3510460cea1fe1e6d8696eecaa0 5ea52d9d83bb9b340eeb78c1b873bcc1c71a9513 Scott Burton <spurton@gmail.com> 1469484604 -0700	commit: Make the date savable in Firebase
+5ea52d9d83bb9b340eeb78c1b873bcc1c71a9513 eb9b522de9628370e796d4ae32f20aa013e58600 Scott Burton <spurton@gmail.com> 1469486544 -0700	commit: Show the loading indicator on addresses load since it takes a while
+eb9b522de9628370e796d4ae32f20aa013e58600 2a1b290396ce79ecd8f6bdc1b7236d80cc99a528 Scott Burton <spurton@gmail.com> 1469488977 -0700	commit: Fix error on contacts
+2a1b290396ce79ecd8f6bdc1b7236d80cc99a528 695cc1dd5cf26b2c99fdaabdfd5a72c64d15aa6c Scott Burton <spurton@gmail.com> 1469507641 -0700	commit: Add location view
+695cc1dd5cf26b2c99fdaabdfd5a72c64d15aa6c 8228e290232fa6d0e73921a690f025565324b8e3 Scott Burton <spurton@gmail.com> 1469507696 -0700	commit: Change the time step. Add google places service and yelp service (for later)
+8228e290232fa6d0e73921a690f025565324b8e3 9eec9b3636080a43ee5bd19602da8ee666542476 Scott Burton <spurton@gmail.com> 1469507709 -0700	commit: link to location on excursion view
+9eec9b3636080a43ee5bd19602da8ee666542476 a293863e93469044ed4952306b5b0d8ddb01fb7a Scott Burton <spurton@gmail.com> 1469507723 -0700	commit: add semicolon
+a293863e93469044ed4952306b5b0d8ddb01fb7a e5bad2e2e57324ca2693b53a1d91b75c076c769e Scott Burton <spurton@gmail.com> 1469507743 -0700	commit: Add oauth signature for yelp
+e5bad2e2e57324ca2693b53a1d91b75c076c769e f9e01c9b05a12afa6dd4bb2fd408880195a4cea1 Scott Burton <spurton@gmail.com> 1469507761 -0700	commit: oauth signature library
+f9e01c9b05a12afa6dd4bb2fd408880195a4cea1 7a7c032cfc0a113577088ddf4573f409bf844540 Scott Burton <spurton@gmail.com> 1469507779 -0700	commit: Add location controller and star ratings css
+7a7c032cfc0a113577088ddf4573f409bf844540 88e9e5435e713144647bb3edb523943a06634be8 Scott Burton <spurton@gmail.com> 1469508509 -0700	commit: remove this
+88e9e5435e713144647bb3edb523943a06634be8 4b00e18e14dec19cf346337f6279ae3b58fa583a Scott Burton <spurton@gmail.com> 1469508517 -0700	commit: add nav button
+4b00e18e14dec19cf346337f6279ae3b58fa583a 2cf0cf873191f08da45f4be76c02666eac957b69 Scott Burton <spurton@gmail.com> 1469576653 -0700	commit: rename to location_map due to some weird reload issue
+2cf0cf873191f08da45f4be76c02666eac957b69 5aa18676fa93dd0d8d2f040f7131cefa17526df0 Scott Burton <spurton@gmail.com> 1469660124 -0700	commit: Changes to location, larger photo
+5aa18676fa93dd0d8d2f040f7131cefa17526df0 4919eeff702aec887beb28f219aa1767eed55a5a Scott Burton <spurton@gmail.com> 1469660138 -0700	commit: css location changes
+4919eeff702aec887beb28f219aa1767eed55a5a 076f7d1c8fc3ef97029220e0d9c4eb0c212aaeca Scott Burton <spurton@gmail.com> 1469744349 -0700	commit: Make the photo area wider, added hasHours to show or not show hours list
+076f7d1c8fc3ef97029220e0d9c4eb0c212aaeca e65e4291c0474c718141c18dac8bc982a437a1ff Scott Burton <spurton@gmail.com> 1469747330 -0700	commit: Excursion time class
+e65e4291c0474c718141c18dac8bc982a437a1ff 111908e895fc8fc0c0c164c042f7c2077f1f2f0f Scott Burton <spurton@gmail.com> 1469747350 -0700	commit: Add private excursions, and browse is default
+111908e895fc8fc0c0c164c042f7c2077f1f2f0f 2083fee9da3f327dc3552f753fb673118eeba988 Scott Burton <spurton@gmail.com> 1469747380 -0700	commit: remove slider stuff. Add hasHours. Log some things
+2083fee9da3f327dc3552f753fb673118eeba988 ce0ff408f0546e3d96457bc67d22618540e934df Scott Burton <spurton@gmail.com> 1469747392 -0700	commit: private excursions and excursion
+ce0ff408f0546e3d96457bc67d22618540e934df e276a9b37a14041b0e1ff2f0acd1ca118d51d685 Scott Burton <spurton@gmail.com> 1469747408 -0700	commit: Don't show the date on excursion, it's irrelevant

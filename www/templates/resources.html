@@ -1,0 +1,22 @@
+<ion-view view-title="Resources">
+  <ion-nav-buttons side="right">
+    
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list">
+      <a ng-repeat="excursion in excursions"
+        ui-sref="app.excursion({id: excursion.$id})"
+        class="item item-icon-left item-text-wrap intro-list-item">
+
+        <i class="fa fa-map-marker icon-50" aria-hidden="true"></i>
+        <div class="excursion-name">{{excursion.name}}</div>
+        <div class="excursion-desc">{{excursion.description}}</div>
+      </a>
+    </div>
+  </ion-content>
+
+  <ion-footer-bar ng-click="pending()" class="bar-positive" >
+    <h1 class="title"><i class="fa fa-wifi" aria-hidden="true"></i> Set Beacon</h1>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,6 @@
+<ion-list>
+  <ion-item ng-repeat="number in numbers" ng-click="saveNumber(number)">
+    {{number.type}}:<br />
+    {{number.value}} <i class="fa fa-plus-square fa-2x" aria-hidden="true" style="float:right;" ng-class="number.added ? 'foray-clicked' : 'foray-green'"></i>
+  </ion-item>
+</ion-list>

@@ -1,0 +1,69 @@
+/*.active_color {
+  color: #9d3535 !important;
+}*/
+
+.date_col:hover {
+  background-color: rgba(157,53,53 0.5);
+  cursor: pointer;
+}
+
+.date_col:active {
+  background-color: rgba(157,53,53 0.5);
+  cursor: pointer;
+}
+
+.no_padding {
+  padding: 0;
+}
+
+.date_cell {
+  padding: 5px;
+}
+
+/*.date_selected {
+  background-color: #9d3535 !important;
+  color: #fff;
+}*/
+
+.today {
+  background-color: #5f4876;
+  color: #fff;
+}
+
+.pointer_events_none {
+  pointer-events: none !important;
+  color: #AAAAAA;
+}
+
+.select_section {
+  padding: 0;
+}
+
+.select_section label {
+  padding: 12px;
+}
+
+.select_section select {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 10px;
+  direction: ltr;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.select_section .item-select:after {
+  right: 4px;
+  border-top: 4px solid;
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-left: 4px solid rgba(0, 0, 0, 0);
+}
+
+.left_arrow {
+  direction: rtl;
+}
+
+.font_22px {
+  font-size: 22px;
+}

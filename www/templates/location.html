@@ -1,0 +1,60 @@
+<ion-view view-title="Location">
+  <ion-nav-buttons side="left">
+  </ion-nav-buttons>
+
+   <ion-content class="has-footer padding">
+    <div class="row" style="margin:-20px;width:400px;">
+      <div class="col col-100">
+        <img ng-src="{{photos[0]}}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-100">
+        <div class="map-container" ng-show="false">
+          <div id="location_map" data-tap-disabled="true"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row" style="padding-top:20px;">
+      <div class="col col-100 foray-excursion-info" style="padding-bottom:20px;">
+        <h2>{{place.name}}</h2>
+        <h5 class="foray-light-grey">{{place.formatted_address}}</h5>
+        <h5 class="foray-light-grey">{{place.formatted_phone_number}}</h5>
+      </div>
+    </div>
+
+    <div class="row rating" style="padding:20px;">
+      <div class="col col-20 rating-number">
+        {{place.rating}}
+      </div>
+      <div class="col col-80">
+        <ul class="star-rating" ng-class="{readonly: readonly}">
+          <li ng-repeat="star in stars" class="star" ng-class="{filled: star.filled}">
+            <i class="fa fa-star"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <span ng-if="hasHours">
+      <div class="row" style="padding:20px;border-top:1px solid #423731">
+        <div class="col col-100 hours">
+          Hours:
+        </div>
+      </div>
+
+      <ion-list>
+        <div class="list">
+          <a ng-repeat="hour in place.opening_hours.weekday_text"
+            class="item item-text-wrap intro-list-item">
+              <input style="display:none;"/>
+              <i class="fa fa-clock-o foray-blue" aria-hidden="true" style="font-size:20px;vertical-align:middle;"></i> 
+              <span class="foray-light-grey" style="font-size:12px;">{{hour}}</span>
+          </a>
+        </div>
+      </ion-list>
+    </span>
+  </ion-content>
+
+</ion-view>

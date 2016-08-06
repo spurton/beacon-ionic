@@ -1,0 +1,24 @@
+<ion-view view-title="My Excursions">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon">
+      <i class="fa fa-sliders fa-2x" aria-hidden="true"></i>
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <div class="list">
+      <a ng-repeat="excursion in excursions"
+        ui-sref="app.private-excursion({id: excursion.$id})"
+        class="item item-icon-left item-text-wrap intro-list-item">
+
+        <i class="fa fa-map-marker icon-50 foray-blue" aria-hidden="true"></i>
+        <div class="excursion-name">{{excursion.name}}</div>
+        <div class="excursion-desc">{{excursion.description}}</div>
+        <div class="excursion-time" ng-if="excursion.date">@ {{excursion.date | date:'medium'}}</div>
+      </a>
+    </div>
+  </ion-content>
+
+  <button id="materialize-button" class="button button-icon icon ion-ios-plus-empty" ui-sref="app.excursion-new">
+  </button>
+</ion-view>

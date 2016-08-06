@@ -1,0 +1,25 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Contacts</h1>
+
+    <button ng-click="saveContacts()" class="button button-icon icon">Done</button>
+    
+  </ion-header-bar>
+
+  <ion-content>
+    <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" placeholder="Search Contacts" style="color:#fff;" ng-model="search.name.formatted">
+    </label>
+
+    <div class="row">
+      <div class="col col-100">
+        <ion-list>
+          <ion-item ng-repeat="contact in contacts| filter:search | limitTo:listlength" ng-click="showPopup(contact)">
+            {{contact.name.formatted}} <i class="fa fa-check-circle fa-2x foray-disabled" aria-hidden="true" style="float:right;" ng-class="contact.added ?  'foray-blue' : 'foray-clicked'"></i>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

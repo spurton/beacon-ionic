@@ -1,0 +1,30 @@
+<div class="a0-loggedin a0-mode">
+    <form novalidate>
+      <div class="a0-body-content">
+        <p class="a0-centered a0-last-time"><%= i18n.t('signin:returnUserLabel') %></p>
+        <div class="a0-strategy"></div>
+        <div class="a0-emailPassword a0-hide">
+            <div class="a0-email">
+                <span class="a0-email-readonly"></span>
+                <input name="email"
+                       type="email"
+                       value=""
+                       disabled
+                       placeholder="<%= i18n.t('signin:emailPlaceholder') %>"
+                       title="<%= i18n.t('signin:emailPlaceholder') %>"
+                       class="a0-hide">
+            </div>
+            <div class="a0-password">
+                <label class="a0-sad-placeholder">
+                  <%= i18n.t('signin:passwordPlaceholder') %>
+                </label>
+                <input name="password" type="password"
+                       autofocus
+                       placeholder="<%= i18n.t('signin:passwordPlaceholder') %>"
+                       title="<%= i18n.t('signin:passwordPlaceholder') %>">
+            </div>
+        </div>
+        <a href="#" class="a0-centered a0-all"><%= i18n.t('signin:all') %></a>
+      </div>
+    </form>
+</div>

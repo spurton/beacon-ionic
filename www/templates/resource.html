@@ -7,7 +7,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col col-100 foray-excursion-info" style="padding-bottom:20px;">
         <h2>{{excursion.name}}</h2>
@@ -17,24 +17,67 @@
 
     <div class="row">
       <div class="col col-100" style="padding-top:10px;">
-        <span class="foray-location-text">Locations</span>
+        <span class="foray-location-text">{{program}}</span>
       </div>
     </div>
 
-    <ion-list>
-      <div class="list">
-        <a ng-repeat="location in excursion.locations"
-          class="item item-icon-left item-text-wrap intro-list-item" ui-sref="app.location({placeId: location.place_id, lat: excursion.lat, lng: excursion.lng})">
-            <input style="display:none;"/>
-            <span class="foray-location-number">#{{$index + 1}}</span>
-            <i class="fa fa-compass fa-2x foray-red location-marker" aria-hidden="true"></i> 
-            <span class="foray-location-name">{{location.name}}</span>
-        </a>
-      </div>
-    </ion-list>
+     <div class="row">
+       <div class="col col-100">
+         <span class=""><strong>Address:</strong> {{address}}</span>
+       </div>
+     </div>
+
+       <div class="row">
+         <div class="col col-100">
+           <span class="">{{description}}</span>
+         </div>
+       </div>
+
+     <div class="row">
+       <div class="col col-100">
+         <span class=""><strong>Hours:</strong> {{hours}}</span>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col col-100">
+         <span class=""><strong>Eligibility:</strong> {{eligibility}}</span>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col col-100">
+         <span class=""><strong>Documents Req'd:</strong> {{documents_required}}</span>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col col-100">
+         <span class=""><strong>Fax:</strong> {{fax}}</span>
+       </div>
+     </div>
+
+     <ion-list>
+       <div class="list">
+         <ul>
+           <li ng-repeat="phone in phoneNumbers" class="item item-icon item-text-wrap intro-list-item">Phone: {{phone}}</li>
+         </ul>
+       </div>
+     </ion-list>
+
+
+
+    <!--<ion-list>-->
+      <!--<div class="list">-->
+        <!--<a ng-repeat="location in excursion.locations"-->
+          <!--class="item item-icon-left item-text-wrap intro-list-item" ui-sref="app.location({placeId: location.place_id, lat: excursion.lat, lng: excursion.lng})">-->
+            <!--<input style="display:none;"/>-->
+            <!--<span class="foray-location-number">#{{$index + 1}}</span>-->
+            <!--<i class="fa fa-compass fa-2x foray-red location-marker" aria-hidden="true"></i>-->
+            <!--<span class="foray-location-name">{{location.name}}</span>-->
+        <!--</a>-->
+      <!--</div>-->
+    <!--</ion-list>-->
   </ion-content>
 
-  <ion-footer-bar ng-click="pending()" class="bar-positive" >
-    <h1 class="title">Lets do it!</h1>
-  </ion-footer-bar>
 </ion-view>

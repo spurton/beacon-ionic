@@ -81,24 +81,34 @@ angular.module('starter.controllers', [])
   $scope.resource = Resources.get($stateParams.id, true);
 
   $scope.resource.$loaded().then(function(resource) {
-    console.log(resource);
-    var waypts = [];
+    $scope.program = resource.program;
+    $scope.description = resource.description;
+    $scope.address = resource.address;
+    $scope.phoneNumbers = resource.phone;
+    $scope.hours = resource.hours;
+    $scope.service_area = resource.service_area;
+    $scope.eligibility = resource.eligibility;
+    $scope.documents_required = resource.documents_required;
+    $scope.volunteering = resource.volnteering;
+    $scope.fax = resource.fax;
 
-    var locations = $scope.resource.locations;
+    var coord1 = Number(resource.coords[0]);
+    var coord2 = Number(resource.coords[1]);
 
-    angular.forEach(locations, function(location) {
-      var latLng = new google.maps.LatLng(location.lat, location.lng);
-      waypts.push({
-        location: latLng,
-        stopover: true
-      });
+    var mapOptions = {
+      zoom: 15,
+      center: {lat: coord1, lng: coord2}
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    new google.maps.Marker({
+      // The below line is equivalent to writing:
+      // position: new google.maps.LatLng(-34.397, 150.644)
+      position: {lat: coord1, lng: coord2},
+      map: map
     });
 
-    var firstLocation = locations[0];
-    var lastLocation = locations[locations.length - 1];
-    var origin = new google.maps.LatLng(firstLocation.lat, firstLocation.lng);
-    var destination = new google.maps.LatLng(lastLocation.lat, lastLocation.lng);
-    GoogleMapsService.addRoute(origin, destination, waypts, true);
   });
 
 })

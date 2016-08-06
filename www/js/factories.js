@@ -241,46 +241,6 @@ angular.module('starter.factories', [])
 
 
 
-
-.factory("DateTimePicker", function() {
-  this.timePickerObject = {
-    step: 1,  //Optional
-    format: 12,  //Optional
-    titleLabel: '12-hour Format',  //Optional
-    setLabel: 'Set',  //Optional
-    closeLabel: 'Close',  //Optional
-    setButtonType: 'button-positive',  //Optional
-    closeButtonType: 'button-stable'
-  }
-
-  this.datePickerObject = {
-    // titleLabel: 'Title',  //Optional
-    todayLabel: 'Today',  //Optional
-    closeLabel: 'Close',  //Optional
-    setLabel: 'Set',  //Optional
-    setButtonType : 'button-royal',  //Optional
-    todayButtonType : 'button-royal',  //Optional
-    closeButtonType : 'button-royal',  //Optional
-    mondayFirst: true,  //Optional
-    // disabledDates: disabledDates, //Optional
-    // weekDaysList: weekDaysList, //Optional
-    // monthList: monthList, //Optional
-    templateType: 'popup', //Optional
-    showTodayButton: 'true', //Optional
-    modalHeaderColor: 'bar-positive', //Optional
-    modalFooterColor: 'bar-positive', //Optional
-    inputDate: new Date(),  //Optional
-    from: new Date(2012, 8, 2), //Optional
-    to: new Date(2018, 8, 25),  //Optional
-    dateFormat: 'dd-MM-yyyy', //Optional
-    closeOnSelect: false
-  }
-
-  return this;
-})
-
-
-
 /*
 ===========================================================================
   G O O G L E   M A P S

@@ -6,13 +6,15 @@ angular.module('beacon', [])
   '$ionicPopup',
   '$state',
   '$timeout',
+  'auth',
   function(
     $ionicLoading,
     $ionicModal,
     $ionicSlideBoxDelegate,
     $ionicPopup,
     $state,
-    $timeout
+    $timeout,
+    auth
   ) {
     return {
       restrict: 'E',
@@ -40,6 +42,7 @@ angular.module('beacon', [])
         scope.saveBeacon = function () {
           scope.modal.hide();
           console.log(scope.beacon);
+          scope.save({beacon: scope.beacon});
         };
 
         scope.saveNeed = function(need) {
@@ -51,6 +54,10 @@ angular.module('beacon', [])
         }
 
         function launchModal() {
+          if (!auth.isAuthenticated) {
+            $state.go('app.login');
+          }
+          
           $ionicModal.fromTemplateUrl('templates/beacon-modal.html', {
             scope: scope,
             animation: 'slide-in-up'

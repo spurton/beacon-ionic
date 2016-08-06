@@ -1,13 +1,13 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function(
-  $scope, 
-  $ionicModal, 
-  $timeout, 
-  $state, 
+  $scope,
+  $ionicModal,
+  $timeout,
+  $state,
   $firebaseAuthService,
-  Auth0Settings, 
-  auth, 
+  Auth0Settings,
+  auth,
   store
 ) {
   // With the new view caching in Ionic, Controllers are only called
@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
   Geolocation.get().then(function(loc){
     $scope.geoloco = loc;
     // Resources.getFromLocation(loc); // temporarily disabled
-    Resources.get().orderByKey().on("child_added", function(data) {
+    Resources.get().on("child_added", function(data) {
       $scope.resources.push(data.val());
       console.log($scope.resources);
     });
@@ -94,7 +94,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('LocationCtrl', function(
-  $scope, 
+  $scope,
   $stateParams,
   GooglePlacesService,
   $ionicSlideBoxDelegate
@@ -131,7 +131,7 @@ angular.module('starter.controllers', [])
 ) {
   $scope.newExcursion = newExcursion;
   $scope.newExcursion.attendees = [];
-  
+
   $scope.reorderLocation = function(location, $fromIndex, $toIndex) {
     location.pos = $toIndex;
   };
@@ -152,8 +152,8 @@ angular.module('starter.controllers', [])
   auth.signin(Auth0Settings, loginCallback($state, store, auth, $firebaseAuthService), loginCallbackError);
 });
 
-function loginCallbackError(error) { 
-  console.error('Auth0Login', error); 
+function loginCallbackError(error) {
+  console.error('Auth0Login', error);
 }
 
 function loginCallback($state, store, auth, $firebaseAuthService) {
@@ -169,12 +169,12 @@ function loginCallback($state, store, auth, $firebaseAuthService) {
       store.set('firebaseToken', delegation.id_token);
 
       $firebaseAuthService.$authWithCustomToken(delegation.id_token)
-        .then(function (auth) { 
-          $state.go('app.excursions'); 
+        .then(function (auth) {
+          $state.go('app.excursions');
         })
-        .catch(function (error) { 
-          alert('LoginError'); 
-          console.error('firebaseauth', error); 
+        .catch(function (error) {
+          alert('LoginError');
+          console.error('firebaseauth', error);
         })
     }, function(error) {
       console.error('Firebase Token', error);

@@ -184,7 +184,7 @@ $ionicons-font-path: "../www/fonts" !default;
 }
 
 .excursion-name {
-  font-size: 20px;
+  font-size: 17px;
   padding-top: 3px;
 }
 
@@ -199,6 +199,10 @@ $ionicons-font-path: "../www/fonts" !default;
 
 .scroll-content {
   background-color: #526867;
+}
+
+.resource-icon-left {
+  padding-left: 35px;
 }
 
 #materialize-button {

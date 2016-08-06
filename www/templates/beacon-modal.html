@@ -15,7 +15,7 @@
     <div class="list list-inset">
       <div class="card" style="background-color:none;">
         <div class="item item-text-wrap">
-          <i class="fa fa-info-circle" aria-hidden="true"></i> A Beacon notifies all local resources of your needs
+          <i class="fa fa-info-circle" aria-hidden="true"></i> Setting a Beacon notifies all local resources of your needs.
         </div>
       </div>
 
@@ -47,6 +47,12 @@
         </li>
 
       </ul>
+
+      <ion-item>
+        <ion-label floating>Additional Info</ion-label>
+        <ion-textarea [(ngModel)]="beacon.notes"></ion-textarea>
+      </ion-item>
+
     </div>
 
     <div style='margin-top: 10px;'>

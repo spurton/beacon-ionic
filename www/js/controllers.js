@@ -62,7 +62,7 @@ angular.module('starter.controllers', [])
   // };
 
   $scope.saveBeacon = function() {
-    Beacons.save(this.newBeacon)
+    UserBeacons.save(this.newBeacon)
       .then(function(data) {
         alert("do something after saving beacon")
       })

@@ -199,8 +199,8 @@ angular.module('starter', [
   $urlRouterProvider.otherwise('/app/resources');
 
   authProvider.init({
-    domain: '',
-    clientID: '',
+    domain: 'beacon-ionic.auth0.com',
+    clientID: 'IOHSkaeENWIRgfnh52vo4xXc2QS5rr8O',
     loginState: 'app.login'
   });
 });

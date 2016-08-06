@@ -6,7 +6,7 @@
   <ion-content>
     <div class="list">
       <a ng-repeat="resource in resources"
-        ui-sref="app.resource({id: key})"
+        ui-sref="app.resource({id: resource.$id})"
         class="item resource-icon-left item-text-wrap intro-list-item">
 
         <i class="fa fa-info-circle icon-50" aria-hidden="true" style="padding-top:10px;color:#009395;"></i>

@@ -43,17 +43,30 @@ angular.module('starter.controllers', [])
   $firebaseRef,
   $firebaseArray,
   Resources,
-  Geolocation
+  Geolocation,
+  newBeacon
 ) {
   Resources.init();
   $scope.searchResults = [];
   $scope.resources = [];
+  $scope.newBeacon = newBeacon;
 
   Geolocation.get().then(function(loc){
     $scope.geoloco = loc;
     $scope.resources = Resources.all();
     // Resources.getFromLocation(loc); // temporarily disabled
   });
+
+  // $scope.saveInfo = function(excursion) {
+  //   console.log('saveinfo', excursion);
+  // };
+
+  $scope.saveBeacon = function() {
+    Beacons.save(this.newBeacon)
+      .then(function(data) {
+        alert("do something after saving beacon")
+      })
+  };
 })
 
 .controller('ResourceCtrl', function(
@@ -118,30 +131,6 @@ angular.module('starter.controllers', [])
         filled: i < value
       });
     }
-  };
-})
-
-.controller('BeaconNewCtrl', function(
-  $scope,
-  Excursions,
-  newExcursion
-) {
-  $scope.newExcursion = newExcursion;
-  $scope.newExcursion.attendees = [];
-
-  $scope.reorderLocation = function(location, $fromIndex, $toIndex) {
-    location.pos = $toIndex;
-  };
-
-  $scope.saveInfo = function(excursion) {
-    console.log('saveinfo', excursion);
-  };
-
-  $scope.saveExcursion = function() {
-    Excursions.save(this.newExcursion)
-      .then(function(data) {
-        alert("do something after saving excursion")
-      })
   };
 })
 

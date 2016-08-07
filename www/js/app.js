@@ -17,8 +17,7 @@ angular.module('starter', [
   'angular-jwt',
   'firebase',
   'ion-google-place',
-  'ionic-datepicker',
-  'ionic-timepicker'
+  'monospaced.elastic'
 ])
 .constant('FirebaseUrl', 'https://beacon-db.firebaseio.com/')
 .constant('Auth0Settings', {

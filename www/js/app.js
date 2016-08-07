@@ -215,7 +215,7 @@ angular.module('starter', [
     return function(list, arrayFilter, element){
       if(arrayFilter){
         return $filter("filter")(list, function(listItem){
-          if (arrayFilter === 'none') return true;
+          if (arrayFilter === 'All') return true;
 
           return listItem[element].indexOf(arrayFilter) != -1;
         });

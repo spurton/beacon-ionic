@@ -5,12 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
-  'ionic', 
-  'starter.controllers', 
-  'starter.factories', 
+  'ionic',
+  'starter.controllers',
+  'starter.factories',
   'beacon',
   'contacts-loader',
-  'LocalStorageModule', 
+  'LocalStorageModule',
   'ngCordova',
   'auth0',
   'angular-storage',
@@ -37,7 +37,7 @@ angular.module('starter', [
   $firebaseObject,
   $firebaseRef,
   auth,
-  store, 
+  store,
   jwtHelper,
   Geolocation
 ) {
@@ -86,7 +86,7 @@ angular.module('starter', [
   function refreshFirebaseAuth(profile) {
     console.log('refreshFirebaseAuth', profile);
   };
-  
+
   $firebaseAuthService.$onAuth(function (user) {
     // console.log('firebase_id', user.auth.fb_id);
     // console.log('store', store.get('profile'))
@@ -102,7 +102,7 @@ angular.module('starter', [
 })
 
 .config(function(
-  $stateProvider, 
+  $stateProvider,
   $urlRouterProvider,
   $firebaseRefProvider,
   FirebaseUrl,
@@ -112,9 +112,10 @@ angular.module('starter', [
     default: FirebaseUrl,
     users: FirebaseUrl + '/users',
     resources: FirebaseUrl + '/resources',
+    categories: FirebaseUrl + '/categories',
     resourcesGeo: FirebaseUrl + '/resources-geo'
   });
-  
+
   $stateProvider
   .state('app', {
     url: '/app',
@@ -210,4 +211,14 @@ angular.module('starter', [
     clientID: 'IOHSkaeENWIRgfnh52vo4xXc2QS5rr8O',
     loginState: 'app.login'
   });
-});
+}).filter('inArray', function($filter){
+    return function(list, arrayFilter, element){
+      if(arrayFilter){
+        return $filter("filter")(list, function(listItem){
+          if (arrayFilter === 'All') return true;
+
+          return listItem[element].indexOf(arrayFilter) != -1;
+        });
+      }
+    };
+  });

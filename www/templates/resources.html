@@ -1,11 +1,18 @@
 <ion-view view-title="Resources">
   <ion-nav-buttons side="right">
-    
   </ion-nav-buttons>
 
-  <ion-content>
+  <ion-content ng-init="selectedCategory = 'All'">
+    <label class = "item item-input item-select item-calm item-borderless">
+      <div class = "input-label">
+        Category
+      </div>
+      <select ng-model="selectedCategory" ng-options="category for category in categories">
+      </select>
+    </label>
+
     <div class="list">
-      <a ng-repeat="resource in resources"
+      <a ng-repeat="resource in resources | inArray : selectedCategory : 'category'"
         ui-sref="app.resource({id: resource.$id})"
         class="item resource-icon-left item-text-wrap intro-list-item">
 

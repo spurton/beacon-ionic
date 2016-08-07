@@ -144,7 +144,7 @@ angular.module('starter.factories', [])
         userRef.push(data)
           .then(function(data){
             // geoFire.set(data.key(), [firstLoc.lat, firstLoc.lng]); // not using
-            var emails = {"emails": [email]}
+            var emails = {"emails": [email]} // note this needs to be a list of emails from the resources
             WebTask.run('https://webtask.it.auth0.com/api/run/wt-spurton-gmail_com-0/email_task?webtask_no_cache=1', emails);
             q.resolve(data);
           })

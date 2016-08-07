@@ -50,11 +50,13 @@ angular.module('starter.controllers', [])
   Resources.init();
   $scope.searchResults = [];
   $scope.resources = [];
+  $scope.categories = [];
   $scope.newBeacon = newBeacon;
 
   Geolocation.get().then(function(loc){
     $scope.geoloco = loc;
     $scope.resources = Resources.all();
+    $scope.categories = Resources.categories;
     // Resources.getFromLocation(loc); // temporarily disabled
   });
 

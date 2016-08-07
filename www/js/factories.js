@@ -6,19 +6,26 @@ angular.module('starter.factories', [])
   auth,
   $firebaseArray
 ) {
+
   var geoFire = new GeoFire($firebaseRef.resourcesGeo);
-  
+  var listCategories = [];
+
   function init() {
     this.list = [];
     var list = this.list;
     var ref = listRef();
-    
+
+    if ($firebaseRef.categories) {
+      $firebaseRef.categories.on('child_added', function (data) {
+        listCategories.push(data.val());
+      });
+    }
+
     if (ref) {
       this.index = $firebaseArray(ref);
       this.index.$watch(function(event) {
         if (event.event === 'child_added') {
           list.push(get(event.key, true)); // for live data
-          get(event.key).then(addToList(list));
         }
       });
     }
@@ -61,7 +68,6 @@ angular.module('starter.factories', [])
       center: [loc.lat, loc.lng],
       radius: 20
     });
-    
     query.on("key_entered", addToList.bind(this));
   }
 
@@ -69,8 +75,8 @@ angular.module('starter.factories', [])
   //   var ref = $firebaseRef.resources.child(key)
   //   $firebaseObject(ref).$loaded()
   //   .then(function(obj){
-  //     if (obj.name) { 
-  //       this.list.push(obj); 
+  //     if (obj.name) {
+  //       this.list.push(obj);
   //     } else {
   //       console.log('addToList, Record Doesnt Exist');
   //     }
@@ -88,7 +94,7 @@ angular.module('starter.factories', [])
   }
 
   function all() {
-    return this.list;
+    return this.list
   }
 
   function get(id, live) {
@@ -116,6 +122,7 @@ angular.module('starter.factories', [])
   return {
     init: init,
     getFromLocation: getFromLocation,
+    categories: listCategories,
     get: get,
     all: all,
     save: save
@@ -178,7 +185,7 @@ angular.module('starter.factories', [])
 .factory("Geolocation", function(store, $cordovaGeolocation, $q) {
   function getLocation() {
     var q = $q.defer();
-  
+
     if (store.get('location')) {
       q.resolve(store.get('location'));
     } else {
@@ -234,7 +241,7 @@ angular.module('starter.factories', [])
   directionsDisplay,
   routeResponse;
   var loc = store.get('location');
- 
+
   function initService(mapEl, key) {
     mapDiv = mapEl;
     if (typeof key !== "undefined") {
@@ -256,7 +263,7 @@ angular.module('starter.factories', [])
       }
     }
   }
- 
+
   function initMap() {
     if (mapDiv) {
       var mapOptions = {
@@ -276,28 +283,28 @@ angular.module('starter.factories', [])
       });
     }
   }
- 
+
   function enableMap() {
     // For demonstration purposes we’ll use a $rootScope variable to enable/disable the map.
     // However, an alternative option would be to broadcast an event and handle it in the controller.
     $rootScope.enableMap = true;
   }
- 
+
   function disableMap() {
     $rootScope.enableMap = false;
   }
- 
+
   function loadGoogleMaps() {
     // This function will be called once the SDK has been loaded
     $window.mapInit = function() {
       initMap();
     };
- 
+
     // Create a script element to insert into the page
     var script = $document[0].createElement("script");
     script.type = "text/javascript";
     script.id = "googleMaps";
- 
+
     // Note the callback function in the URL is the one we created above
     if (apiKey) {
       script.src = 'https://maps.google.com/maps/api/js?key=' + apiKey + '&sensor=true&callback=mapInit';
@@ -306,7 +313,7 @@ angular.module('starter.factories', [])
     }
     $document[0].body.appendChild(script);
   }
- 
+
   function checkLoaded() {
     if (typeof google == "undefined" || typeof google.maps == "undefined") {
       $timeout(function() {
@@ -316,7 +323,7 @@ angular.module('starter.factories', [])
       enableMap();
     }
   }
- 
+
   function addRoute(origin, destination, waypts, optimizeWaypts) {
     routeResponse = null;
     if (typeof google !== "undefined") {
@@ -327,7 +334,7 @@ angular.module('starter.factories', [])
         optimizeWaypoints: optimizeWaypts,
         travelMode : google.maps.TravelMode.WALKING
       };
- 
+
       directionsService.route(routeRequest, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(response);
@@ -340,7 +347,7 @@ angular.module('starter.factories', [])
       });
     }
   }
- 
+
   function removeRoute() {
     if (typeof google !== "undefined" && typeof directionsDisplay !== "undefined") {
       directionsDisplay.setMap(null);
@@ -350,8 +357,8 @@ angular.module('starter.factories', [])
     }
   }
 
-  
- 
+
+
   return {
     initService: function(mapEl, key){
       initService(mapEl, key);
@@ -372,7 +379,7 @@ angular.module('starter.factories', [])
       addRoute(origin, destination, waypts, optimizeWaypts);
     }
   };
- 
+
 }])
 
 .factory('GooglePlacesService', [function($scope) {
@@ -402,7 +409,7 @@ angular.module('starter.factories', [])
     getDetails: getDetails
   }
 }])
- 
+
 /*
 ===========================================================================
   C O N N E C T I V I T Y

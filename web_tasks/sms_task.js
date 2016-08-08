@@ -1,3 +1,6 @@
+//Jen's notes for how to run
+//$  wt create --secret TWILIO_ACCOUNT_SID=AC40c864996f43998121986109bf68a95d --secret TWILIO_AUTH_TOKEN=6b02dcca5e8fe82a05c191347f0312d0 --secret TWILIO_NUMBER=+18053077813 www/js/sms_task.js
+
 var request = require('request');
 // Webtask.io Github service wraps standard webtask and only provides context and callback.
 // context.data has secret params
